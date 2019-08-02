@@ -14,7 +14,7 @@ public class CustomButton extends Button implements View.OnClickListener {
 
 
     Context context;
-    Activity activity;
+
 
     public CustomButton(Context context) {
         super(context);
@@ -26,13 +26,9 @@ public class CustomButton extends Button implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        activity.startActivity(new Intent(activity, WelcomeActivity.class));
+        MyAppInit.activity.startActivity(new Intent(MyAppInit.activity, WelcomeActivity.class));
     }
 
 
-    private void init(Activity activity)
-    {
-        this.activity = activity;
-    }
 
 }
