@@ -12,17 +12,27 @@ import android.widget.Button;
 
 public class CustomButton extends Button implements View.OnClickListener {
 
-    Activity activity;
-    Context context;
 
-    public CustomButton(Activity activity) {
-        super(activity);
-        this.activity = activity;
-    }
+    Context context;
+    Activity activity;
+
+    public CustomButton(Context context) {
+        super(context);
+        this.context= context;
+     }
+
+
 
 
     @Override
     public void onClick(View v) {
         activity.startActivity(new Intent(activity, WelcomeActivity.class));
     }
+
+
+    private void init(Activity activity)
+    {
+        this.activity = activity;
+    }
+
 }
