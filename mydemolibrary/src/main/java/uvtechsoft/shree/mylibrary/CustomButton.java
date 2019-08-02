@@ -42,9 +42,7 @@ public class CustomButton extends Button implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        final Intent intent = new Intent("my.package.action.MY_ACTION");
-        MyAppInit.activity.startActivity(intent);
-        //activity.startActivity(new Intent(activity, WelcomeActivity.class));
+       this.getContext().startActivity(new Intent(this.getContext(),WelcomeActivity.class));
     }
 
 
